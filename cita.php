@@ -1,9 +1,9 @@
 <?php
     require_once "clases/respuestas.class.php";
-    require_once "clases/pacientes.class.php";
+    require_once "clases/citas.class.php";
 
     $_respuestas = new respuestas;
-    $_cita = new pacientes;
+    $_cita = new citas;
 
     if($_SERVER['REQUEST_METHOD'] == "GET") {
 
@@ -14,15 +14,15 @@
          */
         if(isset($_GET["page"])) {
             $pagina         = $_GET["page"];
-            $listaPacientes = $_cita->listaPacientes($pagina);
+            $listaCitas = $_cita->listaCitas($pagina);
             header("Content-Type: application/json");
-            echo json_encode($listaPacientes);
+            echo json_encode($listaCitas);
             http_response_code(200);
         } else if(isset($_GET["id"])) {
             $citaid     = $_GET["id"];
-            $datosPacientes = $_cita->obtenerPaciente($citaid);
+            $datosCita = $_cita->obtenerCita($citaid);
             header("Content-Type: application/json");
-            echo json_encode($datosPacientes);
+            echo json_encode($datosCita);
             http_response_code(200);
         }
         

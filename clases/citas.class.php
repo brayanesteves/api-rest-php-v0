@@ -2,7 +2,7 @@
     require_once "conexion/conexion.php";
     require_once "respuestas.class.php";
 
-    class pacientes extends conexion {
+    class citas extends conexion {
 
         private $table           = "`citas`";
         private $pacienteId      = "";
