@@ -9,7 +9,7 @@ CREATE TABLE `citas` (
   `PacienteId` varchar(45) DEFAULT NULL,
   `Fecha` varchar(45) DEFAULT NULL,
   `HoraInicio` varchar(45) DEFAULT NULL,
-  `HoraFIn` varchar(45) DEFAULT NULL,
+  `HoraFin` varchar(45) DEFAULT NULL,
   `Estado` varchar(45) DEFAULT NULL,
   `Motivo` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
